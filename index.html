@@ -2962,31 +2962,31 @@ const seed = () => ({
     forecastPeriod: 'year',
     labels: {}
   },
-  // 23 WSF facilities — variance is captured per-step below, not as 23 process duplicates
+  // 23 facilities — variance is captured per-step below, not as 23 process duplicates
   locations: [
-    { id: 'loc_oakwood',     name: 'Oakwood, GA',       code: 'OAK', region: 'Southeast', size: 'large',  hrLead: '', notes: 'Corporate HQ — canonical reference.', createdAt: nowISO() },
-    { id: 'loc_pendergrass', name: 'Pendergrass, GA',   code: 'PND', region: 'Southeast', size: 'large',  hrLead: '', notes: '', createdAt: nowISO() },
-    { id: 'loc_dawson',      name: 'Dawson, GA',        code: 'DAW', region: 'Southeast', size: 'medium', hrLead: '', notes: '', createdAt: nowISO() },
-    { id: 'loc_athens',      name: 'Athens, GA',        code: 'ATH', region: 'Southeast', size: 'large',  hrLead: '', notes: '', createdAt: nowISO() },
-    { id: 'loc_columbia',    name: 'Columbia, MS',      code: 'COL', region: 'Southeast', size: 'medium', hrLead: '', notes: '', createdAt: nowISO() },
-    { id: 'loc_collins',     name: 'Collins, MS',       code: 'CLS', region: 'Southeast', size: 'medium', hrLead: '', notes: '', createdAt: nowISO() },
-    { id: 'loc_laurel',      name: 'Laurel, MS',        code: 'LRL', region: 'Southeast', size: 'large',  hrLead: '', notes: '', createdAt: nowISO() },
-    { id: 'loc_morton',      name: 'Morton, MS',        code: 'MRT', region: 'Southeast', size: 'medium', hrLead: '', notes: '', createdAt: nowISO() },
-    { id: 'loc_forest',      name: 'Forest, MS',        code: 'FRS', region: 'Southeast', size: 'small',  hrLead: '', notes: '', createdAt: nowISO() },
-    { id: 'loc_decatur',     name: 'Decatur, AL',       code: 'DCT', region: 'Southeast', size: 'medium', hrLead: '', notes: '', createdAt: nowISO() },
-    { id: 'loc_enterprise',  name: 'Enterprise, AL',    code: 'ENT', region: 'Southeast', size: 'medium', hrLead: '', notes: '', createdAt: nowISO() },
-    { id: 'loc_albertville', name: 'Albertville, AL',   code: 'ALB', region: 'Southeast', size: 'small',  hrLead: '', notes: '', createdAt: nowISO() },
-    { id: 'loc_dothan',      name: 'Dothan, AL',        code: 'DTH', region: 'Southeast', size: 'medium', hrLead: '', notes: '', createdAt: nowISO() },
-    { id: 'loc_blountstown', name: 'Blountstown, FL',   code: 'BLT', region: 'Southeast', size: 'small',  hrLead: '', notes: '', createdAt: nowISO() },
-    { id: 'loc_temperance',  name: 'Temperance, MI',    code: 'TMP', region: 'Midwest',   size: 'small',  hrLead: '', notes: '', createdAt: nowISO() },
-    { id: 'loc_cumming',     name: 'Cumming, GA',       code: 'CMG', region: 'Southeast', size: 'medium', hrLead: '', notes: '', createdAt: nowISO() },
-    { id: 'loc_kinston',     name: 'Kinston, NC',       code: 'KNS', region: 'Southeast', size: 'large',  hrLead: '', notes: '', createdAt: nowISO() },
-    { id: 'loc_dobson',      name: 'Dobson, NC',        code: 'DBS', region: 'Southeast', size: 'medium', hrLead: '', notes: '', createdAt: nowISO() },
-    { id: 'loc_siler_city',  name: 'Siler City, NC',    code: 'SLR', region: 'Southeast', size: 'medium', hrLead: '', notes: '', createdAt: nowISO() },
-    { id: 'loc_st_pauls',    name: "St. Pauls, NC",     code: 'STP', region: 'Southeast', size: 'medium', hrLead: '', notes: '', createdAt: nowISO() },
-    { id: 'loc_moorefield',  name: 'Moorefield, WV',    code: 'MRF', region: 'Mid-Atlantic', size: 'medium', hrLead: '', notes: '', createdAt: nowISO() },
-    { id: 'loc_mayfield',    name: 'Mayfield, KY',      code: 'MFD', region: 'Southeast', size: 'small',  hrLead: '', notes: '', createdAt: nowISO() },
-    { id: 'loc_franconia',   name: 'Franconia, NH',     code: 'FRN', region: 'Northeast', size: 'small',  hrLead: '', notes: '', createdAt: nowISO() }
+    { id: 'loc_alpha',    name: 'Alpha Plant',    code: 'ALP', region: 'Southeast',    size: 'large',  hrLead: '', notes: 'Corporate HQ — canonical reference.', createdAt: nowISO() },
+    { id: 'loc_bravo',    name: 'Bravo Plant',    code: 'BRV', region: 'Southeast',    size: 'large',  hrLead: '', notes: '', createdAt: nowISO() },
+    { id: 'loc_charlie',  name: 'Charlie Plant',  code: 'CHL', region: 'Southeast',    size: 'medium', hrLead: '', notes: '', createdAt: nowISO() },
+    { id: 'loc_delta',    name: 'Delta Plant',    code: 'DLT', region: 'Southeast',    size: 'large',  hrLead: '', notes: '', createdAt: nowISO() },
+    { id: 'loc_echo',     name: 'Echo Plant',     code: 'ECH', region: 'Southeast',    size: 'medium', hrLead: '', notes: '', createdAt: nowISO() },
+    { id: 'loc_foxtrot',  name: 'Foxtrot Plant',  code: 'FOX', region: 'Southeast',    size: 'medium', hrLead: '', notes: '', createdAt: nowISO() },
+    { id: 'loc_golf',     name: 'Golf Plant',     code: 'GLF', region: 'Southeast',    size: 'large',  hrLead: '', notes: '', createdAt: nowISO() },
+    { id: 'loc_hotel',    name: 'Hotel Plant',    code: 'HOT', region: 'Southeast',    size: 'medium', hrLead: '', notes: '', createdAt: nowISO() },
+    { id: 'loc_india',    name: 'India Plant',    code: 'IND', region: 'Southeast',    size: 'small',  hrLead: '', notes: '', createdAt: nowISO() },
+    { id: 'loc_juliet',   name: 'Juliet Plant',   code: 'JLT', region: 'Southeast',    size: 'medium', hrLead: '', notes: '', createdAt: nowISO() },
+    { id: 'loc_kilo',     name: 'Kilo Plant',     code: 'KIL', region: 'Southeast',    size: 'medium', hrLead: '', notes: '', createdAt: nowISO() },
+    { id: 'loc_lima',     name: 'Lima Plant',     code: 'LMA', region: 'Southeast',    size: 'small',  hrLead: '', notes: '', createdAt: nowISO() },
+    { id: 'loc_mike',     name: 'Mike Plant',     code: 'MIK', region: 'Southeast',    size: 'medium', hrLead: '', notes: '', createdAt: nowISO() },
+    { id: 'loc_november', name: 'November Plant', code: 'NOV', region: 'Southeast',    size: 'small',  hrLead: '', notes: '', createdAt: nowISO() },
+    { id: 'loc_oscar',    name: 'Oscar Plant',    code: 'OSC', region: 'Midwest',      size: 'small',  hrLead: '', notes: 'Acquired site — still on legacy systems.', createdAt: nowISO() },
+    { id: 'loc_papa',     name: 'Papa Plant',     code: 'PAP', region: 'Southeast',    size: 'medium', hrLead: '', notes: '', createdAt: nowISO() },
+    { id: 'loc_quebec',   name: 'Quebec Plant',   code: 'QBC', region: 'Southeast',    size: 'large',  hrLead: '', notes: '', createdAt: nowISO() },
+    { id: 'loc_romeo',    name: 'Romeo Plant',    code: 'ROM', region: 'Southeast',    size: 'medium', hrLead: '', notes: '', createdAt: nowISO() },
+    { id: 'loc_sierra',   name: 'Sierra Plant',   code: 'SRA', region: 'Southeast',    size: 'medium', hrLead: '', notes: '', createdAt: nowISO() },
+    { id: 'loc_tango',    name: 'Tango Plant',    code: 'TGO', region: 'Southeast',    size: 'medium', hrLead: '', notes: '', createdAt: nowISO() },
+    { id: 'loc_uniform',  name: 'Uniform Plant',  code: 'UFM', region: 'Mid-Atlantic', size: 'medium', hrLead: '', notes: '', createdAt: nowISO() },
+    { id: 'loc_victor',   name: 'Victor Plant',   code: 'VIC', region: 'Southeast',    size: 'small',  hrLead: '', notes: '', createdAt: nowISO() },
+    { id: 'loc_whiskey',  name: 'Whiskey Plant',  code: 'WSK', region: 'Northeast',    size: 'small',  hrLead: '', notes: 'Acquired site — still on legacy systems.', createdAt: nowISO() }
   ],
   teams: [
     {
@@ -3001,7 +3001,7 @@ const seed = () => ({
           id: uid('p'),
           name: 'New Hire Onboarding',
           description: 'End-to-end coordination from offer accepted through I-9 verification and post-orientation follow-up.',
-          owner: 'Morgan F.',
+          owner: 'HR Process Lead',
           parentProcessId: null,
           frequency: { count: 30, period: 'month' },
           createdAt: nowISO(),
@@ -3159,7 +3159,7 @@ const seed = () => ({
           id: 'p_voluntary_term',
           name: 'Voluntary Termination',
           description: 'End-to-end coordination of an employee-initiated separation, from resignation notice through final pay, system access revocation, and exit documentation.',
-          owner: 'Morgan F.',
+          owner: 'HR Process Lead',
           parentProcessId: null,
           frequency: { count: 8, period: 'month' },
           triggers: [],
@@ -3174,7 +3174,7 @@ const seed = () => ({
           steps: [
             { id: 'vt1', title: 'Submits resignation', description: 'Employee gives written or verbal notice.', shape: 'start', type: 'happy', laneId: 'vt_emp', column: 0, system: '', optimizable: false, optimizationNote: '', optimizationStatus: 'identified', currentMinutes: 0, targetMinutes: 0, realizedMinutes: null, implementedAt: null, notes: '', tasks: [], connections: [{ toId: 'vt2', label: '' }] },
             { id: 'vt2', title: 'Notifies HR', description: 'Manager forwards notice to HR Generalist.', shape: 'step', type: 'happy', laneId: 'vt_mgr', column: 1, system: '', optimizable: false, optimizationNote: '', optimizationStatus: 'identified', currentMinutes: 5, targetMinutes: 5, realizedMinutes: null, implementedAt: null, notes: '', tasks: [], variances: [
-              { id: 'vt2_var1', locationIds: ['loc_pendergrass', 'loc_dawson', 'loc_collins', 'loc_morton', 'loc_dothan'], type: 'skipped', description: 'Manager goes directly to plant HR Coord — bypasses HR Generalist entirely.', minutesDelta: -5 }
+              { id: 'vt2_var1', locationIds: ['loc_bravo', 'loc_charlie', 'loc_foxtrot', 'loc_hotel', 'loc_mike'], type: 'skipped', description: 'Manager goes directly to plant HR Coord — bypasses HR Generalist entirely.', minutesDelta: -5 }
             ], connections: [{ toId: 'vt3', label: '' }] },
             { id: 'vt3', title: 'Resignation notice on file?', description: '', shape: 'decision', type: 'happy', laneId: 'vt_hrgen', column: 2, system: '', optimizable: false, optimizationNote: '', optimizationStatus: 'identified', currentMinutes: 5, targetMinutes: 5, realizedMinutes: null, implementedAt: null, notes: '', tasks: [], connections: [{ toId: 'vt4', label: 'No' }, { toId: 'vt5', label: 'Yes' }] },
             { id: 'vt4', title: 'Requests resignation letter from leader', description: 'Verbal notice — written confirmation needed for record.', shape: 'step', type: 'exception', laneId: 'vt_hrgen', column: 3, system: '', optimizable: true, optimizationNote: 'Templated email could auto-fire on verbal notice flag in Workday.', optimizationStatus: 'identified', currentMinutes: 30, targetMinutes: 5, realizedMinutes: null, implementedAt: null, notes: '', tasks: [], connections: [{ toId: 'vt5', label: '' }] },
@@ -3182,11 +3182,11 @@ const seed = () => ({
             { id: 'vt6', title: 'Term early?', description: '', shape: 'decision', type: 'happy', laneId: 'vt_hrgen', column: 5, system: '', optimizable: false, optimizationNote: '', optimizationStatus: 'identified', currentMinutes: 5, targetMinutes: 5, realizedMinutes: null, implementedAt: null, notes: '', tasks: [], connections: [{ toId: 'vt7', label: 'Yes' }, { toId: 'vt8', label: 'No' }] },
             { id: 'vt7', title: 'Pay EE out for notice period', description: 'Risk-of-flight or competitive concern — separate immediately, pay through notice.', shape: 'step', type: 'exception', laneId: 'vt_hrgen', column: 6, system: 'Workday', optimizable: false, optimizationNote: '', optimizationStatus: 'identified', currentMinutes: 60, targetMinutes: 60, realizedMinutes: null, implementedAt: null, notes: 'Triggered when there is significant competitive concern or client relationship risk.', tasks: [], connections: [{ toId: 'vt8', label: '' }] },
             { id: 'vt8', title: 'Processes termination', description: 'Update HRIS, initiate offboarding workflow.', shape: 'step', type: 'happy', laneId: 'vt_hrcoord', column: 7, system: 'Workday', optimizable: true, optimizationNote: 'Manual updates across Workday, Equifax, and benefits portal — could be batched into single offboarding workflow.', optimizationStatus: 'planned', currentMinutes: 45, targetMinutes: 15, realizedMinutes: null, implementedAt: null, notes: '', tasks: [], variances: [
-              { id: 'vt8_var1', locationIds: ['loc_temperance', 'loc_franconia'], type: 'different-system', description: 'Acquired plants — still on legacy ADP, not Workday. Manual data re-entry required.', minutesDelta: 30 },
-              { id: 'vt8_var2', locationIds: ['loc_dobson', 'loc_st_pauls', 'loc_siler_city'], type: 'longer', description: 'NC locations require additional state separation form (NCUI 506).', minutesDelta: 15 }
+              { id: 'vt8_var1', locationIds: ['loc_oscar', 'loc_whiskey'], type: 'different-system', description: 'Acquired plants — still on legacy ADP, not Workday. Manual data re-entry required.', minutesDelta: 30 },
+              { id: 'vt8_var2', locationIds: ['loc_romeo', 'loc_tango', 'loc_sierra'], type: 'longer', description: 'Three sites in restrictive-state jurisdictions require additional state separation form per local labor regs.', minutesDelta: 15 }
             ], connections: [{ toId: 'vt9', label: '' }] },
             { id: 'vt9', title: 'Holds exit interview', description: 'Standard exit interview, optional 30-min slot.', shape: 'step', type: 'happy', laneId: 'vt_hrcoord', column: 8, system: '', optimizable: false, optimizationNote: '', optimizationStatus: 'identified', currentMinutes: 45, targetMinutes: 45, realizedMinutes: null, implementedAt: null, notes: '', tasks: [], variances: [
-              { id: 'vt9_var1', locationIds: ['loc_collins', 'loc_morton', 'loc_forest', 'loc_albertville', 'loc_blountstown', 'loc_temperance', 'loc_mayfield', 'loc_franconia'], type: 'skipped', description: 'Smaller plants skip exit interviews for hourly workers — only conducted for salaried/exempt.', minutesDelta: -45 }
+              { id: 'vt9_var1', locationIds: ['loc_foxtrot', 'loc_hotel', 'loc_india', 'loc_lima', 'loc_november', 'loc_oscar', 'loc_victor', 'loc_whiskey'], type: 'skipped', description: 'Smaller plants skip exit interviews for hourly workers — only conducted for salaried/exempt.', minutesDelta: -45 }
             ], connections: [{ toId: 'vt10', label: '' }] },
             { id: 'vt10', title: 'Sends separation letter', description: 'Final letter with COBRA notice, 401k rollover packet.', shape: 'end', type: 'happy', laneId: 'vt_hrcoord', column: 9, system: '', optimizable: false, optimizationNote: '', optimizationStatus: 'identified', currentMinutes: 20, targetMinutes: 20, realizedMinutes: null, implementedAt: null, notes: '', tasks: [], connections: [] }
           ]
@@ -3197,7 +3197,7 @@ const seed = () => ({
           id: 'p_position_req',
           name: 'Position Request & Approval',
           description: 'Approval workflow for new positions, from manager request through requisition opening. Includes budget validation, comp review, leveling, and multi-tier approvals based on level/cost.',
-          owner: 'Morgan F.',
+          owner: 'HR Process Lead',
           parentProcessId: null,
           frequency: { count: 12, period: 'month' },
           triggers: [],
@@ -3214,7 +3214,7 @@ const seed = () => ({
             { id: 'pr1', title: 'Manager identifies need', description: 'Backfill or net-new headcount surfaced.', shape: 'start', type: 'happy', laneId: 'pr_mgr', column: 0, system: '', optimizable: false, optimizationNote: '', optimizationStatus: 'identified', currentMinutes: 0, targetMinutes: 0, realizedMinutes: null, implementedAt: null, notes: '', tasks: [], connections: [{ toId: 'pr2', label: '' }] },
             { id: 'pr2', title: 'Manager submits position request', description: 'Title, level, justification, business case, target start date.', shape: 'step', type: 'happy', laneId: 'pr_mgr', column: 1, system: 'Workday', optimizable: false, optimizationNote: '', optimizationStatus: 'identified', currentMinutes: 30, targetMinutes: 30, realizedMinutes: null, implementedAt: null, notes: '', tasks: [], connections: [{ toId: 'pr3', label: '' }] },
             { id: 'pr3', title: 'HRBP review', description: 'Role design, leveling, JD alignment.', shape: 'step', type: 'happy', laneId: 'pr_hrbp', column: 2, system: '', optimizable: false, optimizationNote: '', optimizationStatus: 'identified', currentMinutes: 45, targetMinutes: 45, realizedMinutes: null, implementedAt: null, notes: '', tasks: [], variances: [
-              { id: 'pr3_var1', locationIds: ['loc_pendergrass', 'loc_dawson', 'loc_athens', 'loc_columbia', 'loc_collins', 'loc_laurel', 'loc_morton', 'loc_decatur', 'loc_enterprise', 'loc_dothan', 'loc_kinston', 'loc_dobson'], type: 'extra-step', description: 'Routes through Regional HR Director before HRBP review. Adds ~3 day cycle time on average.', minutesDelta: 60 }
+              { id: 'pr3_var1', locationIds: ['loc_bravo', 'loc_charlie', 'loc_delta', 'loc_echo', 'loc_foxtrot', 'loc_golf', 'loc_hotel', 'loc_juliet', 'loc_kilo', 'loc_mike', 'loc_quebec', 'loc_romeo'], type: 'extra-step', description: 'Routes through Regional HR Director before HRBP review. Adds ~3 day cycle time on average.', minutesDelta: 60 }
             ], connections: [{ toId: 'pr4', label: '' }] },
             { id: 'pr4', title: 'Compensation review', description: 'Salary range, market benchmark, internal equity.', shape: 'step', type: 'happy', laneId: 'pr_comp', column: 3, system: '', optimizable: false, optimizationNote: '', optimizationStatus: 'identified', currentMinutes: 30, targetMinutes: 30, realizedMinutes: null, implementedAt: null, notes: '', tasks: [], connections: [{ toId: 'pr5', label: '' }] },
             { id: 'pr5', title: 'Within budget & comp guardrails?', description: '', shape: 'decision', type: 'happy', laneId: 'pr_hrbp', column: 4, system: '', optimizable: false, optimizationNote: '', optimizationStatus: 'identified', currentMinutes: 5, targetMinutes: 5, realizedMinutes: null, implementedAt: null, notes: '', tasks: [], connections: [{ toId: 'pr6', label: 'No' }, { toId: 'pr9', label: 'Yes' }] },
@@ -4518,7 +4518,7 @@ function renderTour() {
           <li><strong>Cross-team visibility.</strong> Handoffs, escalations, async triggers — visible at a glance. Things stop falling through cracks.</li>
           <li><strong>Compliance-friendly.</strong> JSON export for audit. Schema-versioned. Every change is git-trackable if deployed via repo.</li>
           <li><strong>Zero install.</strong> Single HTML file. Drop on SharePoint, share by URL. Each user has their own local copy.</li>
-          <li><strong>White-label.</strong> Settings panel lets you customize app name, button labels, page titles for WSF branding.</li>
+          <li><strong>White-label.</strong> Settings panel lets you customize app name, button labels, page titles for company branding.</li>
         </ul>
       </section>
 
@@ -4604,7 +4604,7 @@ const SETTINGS_SECTIONS = [
     title: 'Branding',
     subtitle: 'Topbar identity and browser tab title.',
     fields: [
-      { key: 'brandName', label: 'App name', type: 'text', help: 'Shows in the topbar. HTML allowed (e.g., <em>WSF</em> Process Atlas).' },
+      { key: 'brandName', label: 'App name', type: 'text', help: 'Shows in the topbar. HTML allowed (e.g., <em>Northwind</em> Process Atlas).' },
       { key: 'brandSub', label: 'Version label', type: 'text', help: 'Small text next to app name.' },
       { key: 'pageTitle', label: 'Browser tab title', type: 'text', help: 'Shown in the browser tab. Plain text only — HTML stripped.' }
     ]
@@ -5725,7 +5725,7 @@ function openProcessModal(existingId = null) {
       </div>
       <div class="form-row">
         <label class="form-label">Process owner</label>
-        <input id="procOwnerInput" class="form-input" type="text" placeholder="e.g. Morgan F." value="${proc ? escapeHtml(proc.owner || '') : ''}" />
+        <input id="procOwnerInput" class="form-input" type="text" placeholder="e.g. Jane Doe" value="${proc ? escapeHtml(proc.owner || '') : ''}" />
       </div>
       <div class="form-row">
         <label class="form-label">Part of a larger process?</label>
@@ -7934,7 +7934,7 @@ function addStepFlow(shape) {
 
   // Find a free column: start at last.column+1 and walk forward until we find a
   // (column, lane) cell that's not occupied. This prevents the new step from
-  // landing on top of an existing step in the same lane — the bug Morgan hit
+  // landing on top of an existing step in the same lane — a previously reported bug
   // when the renderer stacked two steps at the same coordinate.
   const occupiedInLane = new Set(p.steps.filter(s => s.laneId === lane).map(s => s.column || 0));
   let col = last ? (last.column || 0) + 1 : 0;
