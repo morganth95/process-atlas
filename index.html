@@ -543,6 +543,168 @@
     border-color: rgba(255, 255, 255, 0.4) !important;
   }
 
+  /* How to use button — slightly warmer than Tour */
+  .btn-how-to-use {
+    background: rgba(45,106,79,0.25) !important;
+    border-color: rgba(45,106,79,0.5) !important;
+    color: #a8d4bb !important;
+  }
+  .btn-how-to-use:hover {
+    background: rgba(45,106,79,0.4) !important;
+    border-color: rgba(45,106,79,0.7) !important;
+  }
+
+  /* ============== TUTORIAL OVERLAY ============== */
+  .tut-card {
+    position: fixed;
+    z-index: 9995;
+    width: 340px;
+    background: #0d1b2a;
+    color: #f8f4ec;
+    border-radius: 14px;
+    padding: 22px 24px 20px;
+    box-shadow: 0 16px 48px rgba(0,0,0,0.6), 0 2px 8px rgba(0,0,0,0.4);
+    font-family: 'IBM Plex Sans', sans-serif;
+  }
+  .tut-pos-bottom-right { bottom: 28px; right: 28px; }
+  .tut-pos-bottom-left  { bottom: 28px; left:  28px; }
+  .tut-pos-top-right    { top: 72px;    right: 28px; }
+  .tut-pos-top-left     { top: 72px;    left:  28px; }
+  .tut-pos-center {
+    width: 480px;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .tut-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
+  .tut-mode-pill {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    background: rgba(45,106,79,0.35);
+    color: #a8d4bb;
+    padding: 3px 8px;
+    border-radius: 10px;
+  }
+  .tut-x {
+    background: transparent;
+    border: none;
+    color: rgba(248,244,236,0.4);
+    font-size: 18px;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0 2px;
+    transition: color 0.15s;
+  }
+  .tut-x:hover { color: #f8f4ec; }
+
+  .tut-bar {
+    height: 3px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 2px;
+    margin-bottom: 10px;
+    overflow: hidden;
+  }
+  .tut-fill {
+    height: 100%;
+    background: #2d6a4f;
+    border-radius: 2px;
+    transition: width 0.4s ease;
+  }
+
+  .tut-step-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: rgba(248,244,236,0.4);
+    margin-bottom: 8px;
+  }
+  .tut-title {
+    font-family: 'Fraunces', serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #f8f4ec;
+    margin: 0 0 10px;
+    line-height: 1.25;
+  }
+  .tut-body {
+    font-size: 13.5px;
+    color: rgba(248,244,236,0.75);
+    line-height: 1.6;
+    margin: 0 0 16px;
+  }
+  .tut-foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+
+  /* Summary card */
+  .tut-summary { display: flex; flex-direction: column; gap: 10px; margin-bottom: 6px; }
+  .tut-sq {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 8px;
+    padding: 12px 14px;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .tut-sq:hover { background: rgba(45,106,79,0.25); border-color: rgba(45,106,79,0.5); }
+  .tut-sq-icon { font-size: 18px; flex-shrink: 0; width: 28px; text-align: center; }
+  .tut-sq-q { font-weight: 600; font-size: 13px; color: #f8f4ec; margin-bottom: 2px; }
+  .tut-sq-a { font-size: 11px; color: rgba(248,244,236,0.5); font-family: 'IBM Plex Mono', monospace; }
+
+  /* Done card */
+  .tut-done { display: flex; flex-direction: column; gap: 8px; margin-bottom: 6px; }
+  .tut-done-item {
+    font-size: 13px;
+    color: rgba(248,244,236,0.8);
+    padding: 6px 10px;
+    background: rgba(45,106,79,0.2);
+    border-radius: 6px;
+    border-left: 3px solid #2d6a4f;
+  }
+  .tut-done-cta {
+    font-size: 12px;
+    color: rgba(248,244,236,0.45);
+    font-style: italic;
+    margin-top: 6px;
+    text-align: center;
+  }
+
+  /* Mode selector cards in modal */
+  .tut-mode-card {
+    background: var(--bg-soft);
+    border: 2px solid var(--line);
+    border-radius: 10px;
+    padding: 20px;
+    cursor: pointer;
+    transition: border-color 0.15s, background 0.15s;
+  }
+  .tut-mode-card:hover { border-color: var(--happy); background: #ecf3ee; }
+  .tut-mode-icon { font-size: 28px; margin-bottom: 10px; }
+  .tut-mode-title { font-weight: 600; font-size: 15px; color: var(--ink); margin-bottom: 6px; }
+  .tut-mode-sub { font-size: 13px; color: var(--muted); line-height: 1.5; margin-bottom: 10px; }
+  .tut-mode-meta {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted-soft);
+  }
+
   /* Timeline comparison card in "What this changes" section */
   .tour-timeline-card {
     background: var(--surface);
@@ -3789,7 +3951,7 @@ function renderAtlas() {
           <h1 class="atlas-title">${lbl('atlasTitle')}</h1>
           <div class="atlas-sub">${lbl('atlasSub')}</div>
         </div>
-        <div class="atlas-stats">
+        <div class="atlas-stats" id="tut-atlas-stats">
           <div class="atlas-stat">
             <div class="atlas-stat-num">${state.teams.length}</div>
             <div class="atlas-stat-label">Teams</div>
@@ -3965,7 +4127,7 @@ function renderDashboard() {
           <div class="value">${formatDollars(totalForecastDollars)}</div>
           <div class="value-sub">At $${state.settings.laborRate}/hr loaded rate</div>
         </div>
-        <div class="dash-metric realized">
+        <div class="dash-metric realized" id="tut-realized">
           <div class="label">Realized so far</div>
           <div class="value">${formatHours(totalRealizedHours)}</div>
           <div class="value-sub">${formatDollars(realizedDollars)} from implemented optimizations</div>
@@ -3973,7 +4135,7 @@ function renderDashboard() {
       </div>
 
       <div class="dash-grid">
-        <div class="dash-card">
+        <div class="dash-card" id="tut-roi">
           <h3>ROI ranking</h3>
           <div class="card-sub">Processes with the most forecasted savings — click to drill in.</div>
           ${roiRowsHtml}
@@ -3985,7 +4147,7 @@ function renderDashboard() {
         </div>
       </div>
 
-      <div class="dash-card">
+      <div class="dash-card" id="tut-kanban">
         <h3>Optimization tracker</h3>
         <div class="card-sub">Move opportunities from idea to impact. Click a card to drill into the process.</div>
         <div class="opt-board">
@@ -4243,7 +4405,7 @@ function renderJourney() {
         </div>
       ` : ''}
 
-      <div class="journey-canvas-shell">
+      <div class="journey-canvas-shell" id="tut-journey">
         <div class="journey-canvas-scroll">
           <svg width="${svgWidth}" height="${svgHeight}" viewBox="0 0 ${svgWidth} ${svgHeight}" xmlns="http://www.w3.org/2000/svg">
             <defs>
@@ -4271,6 +4433,297 @@ function renderJourney() {
       </div>
     </div>
   `;
+}
+
+/* ==================================================================
+   TUTORIAL — interactive step-by-step overlay
+   Two modes: manager (evaluating) and intern (capturing).
+   Button-triggered. Spotlight uses box-shadow cutout technique.
+   ================================================================== */
+
+let tutorialState = { active: false, mode: null, step: 0 };
+
+const TUTORIAL = {
+  manager: [
+    {
+      title: 'Making decisions with Process Atlas',
+      body: 'This guide walks through how to answer the three questions you\'ll actually get asked — what to prioritize, what\'s already working, and where the friction lives. Nine steps, about five minutes.',
+      spotlight: null, action: null, pos: 'center'
+    },
+    {
+      title: 'Your process portfolio',
+      body: 'The stats in the top-right are your baseline. The 646 hr forecast is total recoverable time if flagged optimizations land. Six processes, eight opportunities identified. This is the scope of the problem.',
+      spotlight: 'tut-atlas-stats',
+      action: () => navigate('atlas'),
+      pos: 'bottom-left'
+    },
+    {
+      title: 'Prioritize by math, not urgency',
+      body: 'The ROI ranking sorts by forecasted savings — frequency times time saved. New Hire Onboarding leads at 288 hr/yr. This tells you where to start, independent of who complained loudest.',
+      spotlight: 'tut-roi',
+      action: () => navigate('dashboard'),
+      pos: 'bottom-right'
+    },
+    {
+      title: 'What\'s already banked',
+      body: 'Realized so far is the number you bring to leadership. 78 hours already recovered from optimizations that shipped. This is proof the model works — not just a forecast.',
+      spotlight: 'tut-realized',
+      action: () => navigate('dashboard'),
+      pos: 'bottom-right'
+    },
+    {
+      title: 'Your optimization pipeline',
+      body: 'Move cards left to right. Implemented is where hours actually come back. The goal is an empty Identified column — everything either in motion or intentionally deferred.',
+      spotlight: 'tut-kanban',
+      action: () => navigate('dashboard'),
+      pos: 'top-right'
+    },
+    {
+      title: 'See where work gets stuck between teams',
+      body: 'Each card is a process. Solid arrows are sync handoffs — work stops and waits. Dashed arrows are async — fire and forget. The slowest processes are usually the ones with the most sync arrows crossing team boundaries.',
+      spotlight: 'tut-journey',
+      action: () => navigate('journey'),
+      pos: 'bottom-right'
+    },
+    {
+      title: 'Read a process map',
+      body: 'Green steps are the happy path. Red steps are exceptions — things that shouldn\'t happen but do. The ±N badge means that many locations do this step differently. The ⚡ badge means an optimization has been flagged.',
+      spotlight: 'canvasScroll',
+      action: () => {
+        const t = state.teams.find(t => t.processes.some(p => p.id === 'p_voluntary_term'));
+        if (t) navigate('process', { teamId: t.id, processId: 'p_voluntary_term' });
+        else navigate('process', { teamId: state.teams[0].id, processId: state.teams[0].processes[0].id });
+      },
+      pos: 'bottom-right'
+    },
+    {
+      title: 'Let Insights do the reading',
+      body: 'You don\'t have to read every step. Insights surfaces what\'s worth your attention: process integrity, forecasted savings, optimization opportunities ranked by annual hours, and variance hotspots by location reach. Start here, drill down only when needed.',
+      spotlight: 'rightPanel',
+      action: null,
+      pos: 'bottom-left'
+    },
+    {
+      title: 'Three questions. One tool.',
+      body: null, pos: 'center', isSummary: true
+    }
+  ],
+  intern: [
+    {
+      title: 'Capturing processes for the first time',
+      body: 'Your job is to get the work out of people\'s heads and into a format that\'s analyzable. Every process you capture becomes part of the organization\'s process intelligence. Here\'s how to do it well.',
+      spotlight: null, action: null, pos: 'center'
+    },
+    {
+      title: 'Everything starts here',
+      body: 'Click Quick Capture for any process you want to map. The wizard takes about 5 minutes for something you know well. Start with a process you\'ve personally done or just observed — don\'t try to map something you haven\'t seen.',
+      spotlight: 'tut-capture',
+      action: () => navigate('atlas'),
+      pos: 'bottom-left'
+    },
+    {
+      title: 'Frequency multiplies everything',
+      body: 'This is the most important number in the capture. A 5-minute saving at 500 executions per year is 41 hours recovered. Get this from the manager — don\'t guess. If they don\'t know, ask how many times per week or month.',
+      spotlight: 'tut-wizard-freq',
+      action: () => startWizard(),
+      pos: 'bottom-right'
+    },
+    {
+      title: 'Lanes are who, not what',
+      body: 'Each lane is a role or team, not a step. Three to five is the right range. More than five usually means you\'re looking at two separate processes. Ask "who actually touches this?" — not "what happens?"',
+      spotlight: 'tut-wizard-lanes',
+      action: () => wizardSetStep(2),
+      pos: 'bottom-right'
+    },
+    {
+      title: 'Happy path first, then the exceptions',
+      body: 'Map the way it\'s supposed to go before adding what goes wrong. Use + Decision to add branching points. Exception steps go red automatically. Don\'t capture every edge case — capture the three that happen most often.',
+      spotlight: 'canvasScroll',
+      action: () => {
+        closeModal();
+        const t = state.teams[0];
+        const proc = t.processes[0];
+        if (proc) navigate('process', { teamId: t.id, processId: proc.id });
+      },
+      pos: 'bottom-right'
+    },
+    {
+      title: 'Flag problems, don\'t solve them',
+      body: 'The optimization flag is where you note friction — not fix it. One sentence: what makes this step painful, slow, or error-prone? Include the system and roughly how many minutes it could save. The analysis happens later.',
+      spotlight: 'tut-optflag',
+      action: () => {
+        const t = state.teams[0];
+        const proc = t.processes.find(p => p.steps.some(s => s.optimizable)) || t.processes[0];
+        if (proc) {
+          navigate('process', { teamId: t.id, processId: proc.id });
+          setTimeout(() => {
+            const s = proc.steps.find(s => s.optimizable) || proc.steps[1];
+            if (s) { selectStep(s.id); setRightTab('step'); }
+          }, 400);
+        }
+      },
+      pos: 'bottom-left'
+    },
+    {
+      title: 'Capture location variances',
+      body: 'If this process runs at multiple sites, check whether this step looks different at some locations. Which plants? What\'s different — extra approval, different system, skipped entirely? Add a variance for each pattern. This is where multi-site intelligence lives.',
+      spotlight: 'tut-variances',
+      action: null,
+      pos: 'bottom-left'
+    },
+    {
+      title: 'You\'re ready.',
+      body: null, pos: 'center', isDone: true
+    }
+  ]
+};
+
+function startTutorial() {
+  showModal({
+    title: 'How to use Process Atlas',
+    size: 'medium',
+    body: `
+      <p style="color: var(--muted); font-size: 14px; margin-bottom: 24px;">Choose the guide that fits what you're doing right now.</p>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+        <div class="tut-mode-card" onclick="selectTutorialMode('manager')">
+          <div class="tut-mode-icon">📊</div>
+          <div class="tut-mode-title">I'm evaluating this tool</div>
+          <div class="tut-mode-sub">For process managers, directors, and decision-makers. Learn how to answer the three questions you'll get asked.</div>
+          <div class="tut-mode-meta">9 steps · ~5 min</div>
+        </div>
+        <div class="tut-mode-card" onclick="selectTutorialMode('intern')">
+          <div class="tut-mode-icon">📝</div>
+          <div class="tut-mode-title">I'm capturing processes</div>
+          <div class="tut-mode-sub">For interns and process owners. Learn how to get tribal knowledge into the tool correctly.</div>
+          <div class="tut-mode-meta">8 steps · ~5 min</div>
+        </div>
+      </div>
+    `,
+    actions: [{ label: 'Cancel', class: 'btn-secondary', onClick: closeModal }]
+  });
+}
+
+function selectTutorialMode(mode) {
+  closeModal();
+  tutorialState = { active: true, mode, step: 0 };
+  const step = TUTORIAL[mode][0];
+  if (step.action) step.action();
+  setTimeout(() => renderTutorialOverlay(), 150);
+}
+
+function tutNext() {
+  const steps = TUTORIAL[tutorialState.mode];
+  if (tutorialState.step >= steps.length - 1) { exitTutorial(); return; }
+  tutorialState.step++;
+  const step = steps[tutorialState.step];
+  _clearTutorialDom();
+  if (step.action) { step.action(); setTimeout(() => renderTutorialOverlay(), 400); }
+  else renderTutorialOverlay();
+}
+
+function tutPrev() {
+  if (tutorialState.step <= 0) return;
+  tutorialState.step--;
+  const step = TUTORIAL[tutorialState.mode][tutorialState.step];
+  _clearTutorialDom();
+  if (step.action) { step.action(); setTimeout(() => renderTutorialOverlay(), 400); }
+  else renderTutorialOverlay();
+}
+
+function exitTutorial() {
+  tutorialState = { active: false, mode: null, step: 0 };
+  _clearTutorialDom();
+}
+
+function _clearTutorialDom() {
+  ['tutorialSpotlight','tutorialDimmer','tutorialCard'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.remove();
+  });
+}
+
+function renderTutorialOverlay() {
+  _clearTutorialDom();
+  if (!tutorialState.active) return;
+
+  const steps = TUTORIAL[tutorialState.mode];
+  const step = steps[tutorialState.step];
+  const total = steps.length;
+  const isFirst = tutorialState.step === 0;
+  const isLast = tutorialState.step === total - 1;
+  const progress = Math.round((tutorialState.step / (total - 1)) * 100);
+
+  // Spotlight or dimmer
+  const target = step.spotlight ? document.getElementById(step.spotlight) : null;
+  if (target) {
+    const r = target.getBoundingClientRect();
+    const pad = 10;
+    const spot = document.createElement('div');
+    spot.id = 'tutorialSpotlight';
+    spot.style.cssText = `position:fixed;top:${r.top-pad}px;left:${r.left-pad}px;width:${r.width+pad*2}px;height:${r.height+pad*2}px;border-radius:8px;z-index:9991;pointer-events:none;box-shadow:0 0 0 9999px rgba(13,27,42,0.80),0 0 0 3px #2d6a4f,0 0 0 6px rgba(45,106,79,0.25);transition:all 0.3s ease;`;
+    document.body.appendChild(spot);
+  } else {
+    const dimmer = document.createElement('div');
+    dimmer.id = 'tutorialDimmer';
+    dimmer.style.cssText = 'position:fixed;inset:0;background:rgba(13,27,42,0.7);z-index:9990;pointer-events:none;';
+    document.body.appendChild(dimmer);
+  }
+
+  // Card content
+  let inner = '';
+  if (step.isSummary) {
+    inner = `
+      <div class="tut-summary">
+        <div class="tut-sq" onclick="navigate('dashboard');exitTutorial()">
+          <span class="tut-sq-icon">📊</span>
+          <div><div class="tut-sq-q">What should I prioritize?</div><div class="tut-sq-a">Dashboard → ROI ranking</div></div>
+        </div>
+        <div class="tut-sq" onclick="navigate('dashboard');exitTutorial()">
+          <span class="tut-sq-icon">✓</span>
+          <div><div class="tut-sq-q">What's already working?</div><div class="tut-sq-a">Dashboard → Realized so far</div></div>
+        </div>
+        <div class="tut-sq" onclick="navigate('journey');exitTutorial()">
+          <span class="tut-sq-icon">→</span>
+          <div><div class="tut-sq-q">Where does work get stuck?</div><div class="tut-sq-a">Journey → sync handoffs</div></div>
+        </div>
+      </div>`;
+  } else if (step.isDone) {
+    inner = `
+      <div class="tut-done">
+        <div class="tut-done-item">✓ Start with Quick Capture on a process you know</div>
+        <div class="tut-done-item">✓ Get the frequency number from the process owner</div>
+        <div class="tut-done-item">✓ Happy path first, exceptions second</div>
+        <div class="tut-done-item">✓ Flag friction — don't solve it</div>
+        <div class="tut-done-item">✓ Add variances for locations that differ</div>
+        <div class="tut-done-cta">First capture takes 15 min. By the third, you're under 5.</div>
+      </div>`;
+  } else {
+    inner = `<p class="tut-body">${escapeHtml(step.body)}</p>`;
+  }
+
+  const posClass = `tut-pos-${step.pos || 'bottom-right'}`;
+  const modeLabel = tutorialState.mode === 'manager' ? 'Evaluating' : 'Capturing';
+
+  const card = document.createElement('div');
+  card.id = 'tutorialCard';
+  card.className = `tut-card ${posClass}`;
+  card.innerHTML = `
+    <div class="tut-head">
+      <span class="tut-mode-pill">${modeLabel}</span>
+      <button class="tut-x" onclick="exitTutorial()" title="Exit">×</button>
+    </div>
+    <div class="tut-bar"><div class="tut-fill" style="width:${progress}%"></div></div>
+    <div class="tut-step-label">Step ${tutorialState.step + 1} of ${total}</div>
+    <h3 class="tut-title">${escapeHtml(step.title)}</h3>
+    ${inner}
+    <div class="tut-foot">
+      ${!isFirst ? `<button class="btn btn-sm" style="background:rgba(255,255,255,0.12);color:#f8f4ec;border:1px solid rgba(255,255,255,0.2);" onclick="tutPrev()">← Back</button>` : '<div></div>'}
+      ${isLast
+        ? `<button class="btn btn-primary btn-sm" onclick="exitTutorial()">Done ✓</button>`
+        : `<button class="btn btn-primary btn-sm" onclick="tutNext()">Next →</button>`}
+    </div>
+  `;
+  document.body.appendChild(card);
 }
 
 function setJourneyColorBy(mode) { journeyView.colorBy = mode; render(); }
@@ -5187,7 +5640,7 @@ function renderWizardStep1() {
         <div><strong>Pick the most specific team.</strong> If this process spans teams, pick the one that owns it. You can always change this later.</div>
       </div>
 
-      <div class="wizard-row">
+      <div class="wizard-row" id="tut-wizard-freq">
         <div>
           <label>Part of a larger process?</label>
           <select onchange="wizard.data.parentProcessId = this.value || null">${parentOptions}</select>
@@ -5243,7 +5696,7 @@ function renderWizardStep2() {
     <h1 class="wizard-title">Who's involved?</h1>
     <p class="wizard-lede">Lanes are the roles, teams, or systems that take part in this process. Each step will live in one lane.</p>
 
-    <div class="wizard-card">
+    <div class="wizard-card" id="tut-wizard-lanes">
       <label>Lanes</label>
       <div class="wizard-lane-list">${lanesHtml || '<div style="color: var(--ink-soft); font-size: 13px; padding: 8px 0;">No lanes yet — add the first one below.</div>'}</div>
       <button class="wizard-add-btn" onclick="wzAddLane()">+ Add lane</button>
@@ -5858,9 +6311,7 @@ function renderProcess() {
             <button class="panel-collapse-btn" onclick="toggleRightPanel()" title="Expand panel">⇤</button>
           </div>
         ` : `
-          <div class="right-panel">
-            <div class="right-panel-tabs">
-              <button class="right-tab ${editor.rightTab === 'insights' ? 'active' : ''}" onclick="setRightTab('insights')">Insights</button>
+          <div class="right-panel" id="rightPanel">              <button class="right-tab ${editor.rightTab === 'insights' ? 'active' : ''}" onclick="setRightTab('insights')">Insights</button>
               <button class="right-tab ${editor.rightTab === 'step' ? 'active' : ''}" onclick="setRightTab('step')">Step</button>
               <button class="right-tab ${editor.rightTab === 'lanes' ? 'active' : ''}" onclick="setRightTab('lanes')">Lanes</button>
               <button class="right-tab ${editor.rightTab === 'triggers' ? 'active' : ''}" onclick="setRightTab('triggers')">Triggers${(proc.triggers || []).length ? ` (${proc.triggers.length})` : ''}</button>
@@ -7472,7 +7923,7 @@ function renderStepEditor(proc) {
       </div>
     </div>
 
-    <div class="form-row">
+    <div class="form-row" id="tut-optflag">
       <label class="form-label">Optimization flag</label>
       <div class="checkbox-row ${s.optimizable ? 'active' : ''}" onclick="toggleOpt('${s.id}')">
         <input type="checkbox" ${s.optimizable ? 'checked' : ''} onclick="event.stopPropagation();" onchange="toggleOpt('${s.id}')" />
@@ -7517,7 +7968,7 @@ function renderStepEditor(proc) {
       <button class="task-add" onclick="addConn('${s.id}')">+ Add connection</button>
     </div>
 
-    <div class="form-row">
+    <div class="form-row" id="tut-variances">
       <label class="form-label">Location variances ${(s.variances || []).length > 0 ? `<span class="variance-count-badge">${s.variances.length}</span>` : ''}</label>
       <div class="form-help" style="font-size: 11px; color: var(--muted); margin-bottom: 8px;">How this step differs at specific locations. Each variance lists which locations deviate, what changes, and the time impact.</div>
       <div>${renderVariancesHtml(s)}</div>
@@ -8210,9 +8661,10 @@ function renderTopbar() {
   if (actions) {
     actions.innerHTML = `
       <button class="btn btn-topbar btn-sm btn-tour" onclick="navigate('tour')" title="Demo walkthrough — built for new viewers">★ Tour</button>
+      <button class="btn btn-topbar btn-sm btn-how-to-use" onclick="startTutorial()" title="Step-by-step guide for managers and process capturers">▶ How to use this</button>
       <button class="btn btn-topbar btn-sm" onclick="navigate('journey')">${escapeHtml(lbl('btnJourney'))}</button>
       <button class="btn btn-topbar btn-sm" onclick="navigate('dashboard')">${escapeHtml(lbl('btnDashboard'))}</button>
-      <button class="btn btn-topbar btn-sm" onclick="startWizard()">${escapeHtml(lbl('btnCapture'))}</button>
+      <button class="btn btn-topbar btn-sm" id="tut-capture" onclick="startWizard()">${escapeHtml(lbl('btnCapture'))}</button>
       <button class="btn btn-topbar btn-sm" onclick="exportData()">${escapeHtml(lbl('btnExport'))}</button>
       <button class="btn btn-topbar btn-sm" onclick="document.getElementById('importInput').click()">${escapeHtml(lbl('btnImport'))}</button>
       <input type="file" id="importInput" accept=".json" style="display:none" onchange="importData(event)" />
