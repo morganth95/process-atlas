@@ -876,6 +876,58 @@
   .variance-hotspot-card { border-left: 3px solid #9d2d2d; }
   .variance-hotspot-card:hover { background: #fbf5f5; }
 
+  /* Tour capture-step list (How a capture works section) */
+  .tour-capture-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin: 8px 0 24px;
+  }
+  .tour-capture-step {
+    display: flex;
+    gap: 18px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--happy);
+    border-radius: 8px;
+    padding: 18px 22px 16px;
+  }
+  .tour-capture-num {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 28px;
+    color: var(--happy);
+    line-height: 1;
+    flex-shrink: 0;
+    width: 38px;
+  }
+  .tour-capture-body { flex: 1; min-width: 0; }
+  .tour-capture-title {
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--ink);
+    margin-bottom: 8px;
+  }
+  .tour-capture-what,
+  .tour-capture-why {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.55;
+    margin-bottom: 6px;
+  }
+  .tour-capture-what strong,
+  .tour-capture-why strong {
+    color: var(--ink-soft);
+    font-weight: 600;
+  }
+  .tour-capture-cta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+  }
+
   /* Multi-site tour card */
   .tour-multisite-card {
     background: var(--surface);
@@ -3008,6 +3060,113 @@
     .right-panel { position: static; max-height: none; }
   }
 
+  /* ============== MOBILE (<= 720px) ==============
+     The app is desktop-first — mobile is a "good enough to read and demo" experience.
+     The process editor SVG canvas remains horizontally scrollable; everything else
+     stacks vertically with appropriate type sizing. */
+  @media (max-width: 720px) {
+    body { font-size: 14px; }
+
+    /* Topbar wraps to two lines on phone, with smaller buttons */
+    .topbar {
+      padding: 10px 12px;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .topbar-actions {
+      flex-wrap: wrap;
+      gap: 4px;
+      justify-content: flex-end;
+    }
+    .btn-topbar.btn-sm {
+      font-size: 11px;
+      padding: 5px 8px;
+    }
+    .brand-name { font-size: 14px; }
+    .brand-version { display: none; }
+    .crumbs { font-size: 11px; padding: 8px 12px; }
+
+    /* Page padding tightens up */
+    .page, .page-narrow, .page-wide { padding: 20px 14px; }
+
+    /* Atlas hero — stack stats below title rather than right-aligned */
+    .atlas-hero { flex-direction: column; gap: 18px; align-items: flex-start; }
+    .atlas-stats {
+      flex-wrap: wrap;
+      gap: 18px 24px;
+    }
+    .atlas-stat { text-align: left; }
+    .atlas-title { font-size: 30px; line-height: 1.1; }
+    .atlas-sub { font-size: 13px; max-width: none; }
+
+    /* Atlas team grid: single column on mobile */
+    .teams-grid { grid-template-columns: 1fr !important; }
+    .team-card { min-height: auto; }
+
+    /* Dashboard: stat cards 2-up, ROI/hotspots stack, kanban stacks */
+    .dash-metrics { grid-template-columns: 1fr 1fr !important; gap: 12px; }
+    .dash-grid { grid-template-columns: 1fr !important; gap: 16px; }
+    .opt-board { grid-template-columns: 1fr !important; gap: 12px; }
+    .dash-metric .value { font-size: 28px; }
+    .dash-metric .label { font-size: 10px; }
+
+    /* Tour view layout shrinks */
+    .tour-stats { grid-template-columns: 1fr 1fr !important; gap: 16px; }
+    .tour-stat-num { font-size: 28px; }
+    .tour-cards-grid { grid-template-columns: 1fr !important; }
+    .tour-bullets { grid-template-columns: 1fr !important; }
+    .tour-impact-prose { grid-template-columns: 1fr !important; gap: 14px; }
+    .tour-multisite-comparison { grid-template-columns: 1fr !important; }
+    .tour-multisite-divider { transform: rotate(90deg); align-self: center; }
+    .tour-h2 { font-size: 24px; }
+    .tour-lead { font-size: 17px; }
+    .tour-cta-buttons { flex-direction: column; }
+    .tour-cta-buttons .btn { width: 100%; }
+
+    /* Journey view canvas — let it scroll horizontally on mobile */
+    .journey-canvas-shell { overflow-x: auto; }
+    .journey-controls { flex-wrap: wrap; gap: 12px; }
+
+    /* Tutorial overlay — full width minus margin, sit at bottom */
+    .tut-card {
+      width: calc(100vw - 24px) !important;
+      max-width: 380px;
+      left: 12px !important;
+      right: 12px !important;
+      bottom: 12px !important;
+      top: auto !important;
+      transform: none !important;
+      padding: 18px 20px 16px;
+    }
+    .tut-pos-center {
+      top: 50% !important;
+      bottom: auto !important;
+      left: 12px !important;
+      transform: translateY(-50%) !important;
+    }
+    .tut-title { font-size: 18px; }
+    .tut-body { font-size: 13px; }
+
+    /* Mode-selector cards stack on mobile */
+    .modal { width: 100%; max-width: calc(100vw - 24px); }
+    .modal-body > div[style*="grid-template-columns: 1fr 1fr"] {
+      grid-template-columns: 1fr !important;
+    }
+
+    /* Process editor — acknowledge canvas needs horizontal scroll on mobile */
+    .editor-bar { flex-wrap: wrap; gap: 8px; }
+    .editor-actions { flex-wrap: wrap; }
+    .canvas-toolbar { flex-wrap: wrap; gap: 6px; padding: 8px; }
+    .canvas-toolbar-label { font-size: 9px; }
+    .step-list-row { flex-wrap: wrap; }
+
+    /* Wizard modal full-width on mobile */
+    .wizard-modal { padding: 16px; }
+    .wizard-card { padding: 16px; }
+    .wizard-row { grid-template-columns: 1fr !important; gap: 10px; }
+    .wizard-title { font-size: 22px; }
+  }
+
   /* ============== TOAST ============== */
   .toast {
     position: fixed;
@@ -4516,7 +4675,7 @@ const TUTORIAL = {
     },
     {
       title: 'Everything starts here',
-      body: 'Click Quick Capture for any process you want to map. The wizard takes about 5 minutes for something you know well. Start with a process you\'ve personally done or just observed — don\'t try to map something you haven\'t seen.',
+      body: 'Click Quick Capture for any process you want to map. Quick Capture takes about 5 minutes for something you know well. Start with a process you\'ve personally done or just observed — don\'t try to map something you haven\'t seen.',
       spotlight: 'tut-capture',
       action: () => navigate('atlas'),
       pos: 'bottom-left'
@@ -4606,6 +4765,7 @@ function startTutorial() {
 function selectTutorialMode(mode) {
   closeModal();
   tutorialState = { active: true, mode, step: 0 };
+  _lockScroll(true);
   const step = TUTORIAL[mode][0];
   if (step.action) step.action();
   setTimeout(() => renderTutorialOverlay(), 150);
@@ -4617,6 +4777,7 @@ function tutNext() {
   tutorialState.step++;
   const step = steps[tutorialState.step];
   _clearTutorialDom();
+  _lockScroll(false);  // unlock so the next step's action can navigate/scroll the canvas
   if (step.action) { step.action(); setTimeout(() => renderTutorialOverlay(), 400); }
   else renderTutorialOverlay();
 }
@@ -4626,6 +4787,7 @@ function tutPrev() {
   tutorialState.step--;
   const step = TUTORIAL[tutorialState.mode][tutorialState.step];
   _clearTutorialDom();
+  _lockScroll(false);
   if (step.action) { step.action(); setTimeout(() => renderTutorialOverlay(), 400); }
   else renderTutorialOverlay();
 }
@@ -4633,6 +4795,20 @@ function tutPrev() {
 function exitTutorial() {
   tutorialState = { active: false, mode: null, step: 0 };
   _clearTutorialDom();
+  _lockScroll(false);
+}
+
+// Lock body scroll during tutorial steps so the spotlighted element stays
+// fixed in place. Without this, the user can scroll the page but the spotlight
+// stays at fixed coordinates, ending up over empty space.
+function _lockScroll(on) {
+  if (on) {
+    document.body.style.overflow = 'hidden';
+    document.documentElement.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = '';
+    document.documentElement.style.overflow = '';
+  }
 }
 
 function _clearTutorialDom() {
@@ -4653,8 +4829,18 @@ function renderTutorialOverlay() {
   const isLast = tutorialState.step === total - 1;
   const progress = Math.round((tutorialState.step / (total - 1)) * 100);
 
-  // Spotlight or dimmer
+  // Unlock briefly so we can scroll the target into view, then re-lock to keep the spotlight static.
+  _lockScroll(false);
   const target = step.spotlight ? document.getElementById(step.spotlight) : null;
+  if (target) {
+    target.scrollIntoView({ behavior: 'auto', block: 'center', inline: 'nearest' });
+  } else {
+    // No target: just scroll to top so the centered card has clean negative space.
+    window.scrollTo(0, 0);
+  }
+  _lockScroll(true);
+
+  // Spotlight or dimmer (computed after scrollIntoView so coordinates are accurate)
   if (target) {
     const r = target.getBoundingClientRect();
     const pad = 10;
@@ -4801,8 +4987,8 @@ function renderTour() {
           <div class="tour-card">
             <div class="tour-card-num">01</div>
             <div class="tour-card-title">Capture</div>
-            <div class="tour-card-body">A 5-minute wizard turns a fuzzy notion into a structured process. Lanes, steps, frequency, optimization flags, owner. Opinionated guardrails — can't ship without naming the start and end.</div>
-            <button class="tour-card-link" onclick="startWizard()">Try the wizard →</button>
+            <div class="tour-card-body">A 5-minute Quick Capture turns a fuzzy notion into a structured process. Lanes, steps, frequency, optimization flags, owner. Opinionated guardrails — can't ship without naming the start and end.</div>
+            <button class="tour-card-link" onclick="startWizard()">Try Quick Capture →</button>
           </div>
           <div class="tour-card">
             <div class="tour-card-num">02</div>
@@ -4885,8 +5071,8 @@ function renderTour() {
           <div class="tour-step" onclick="startWizard()">
             <div class="tour-step-num">${positionRef ? '7' : '6'}</div>
             <div class="tour-step-body">
-              <div class="tour-step-title">Capture a new process — Quick Capture wizard</div>
-              <div class="tour-step-desc">Five-step wizard. Walks through frequency, lanes, steps, optimization opportunities. Inline coaching tips. Designed so a process owner who's never used a flowchart tool can ship a complete capture in under five minutes.</div>
+              <div class="tour-step-title">Capture a new process — Quick Capture</div>
+              <div class="tour-step-desc">Five-step Quick Capture. Walks through frequency, lanes, steps, optimization opportunities. Inline coaching tips. Designed so a process owner who's never used a flowchart tool can ship a complete capture in under five minutes.</div>
             </div>
             <div class="tour-step-arrow">→</div>
           </div>
@@ -5018,15 +5204,74 @@ function renderTour() {
         </div>
       </section>
 
-      <!-- Section 6: From POC to repository -->
+      <!-- Section 6: How a capture works -->
       <section class="tour-section">
-        <div class="section-eyebrow">06 · What ships next</div>
+        <div class="section-eyebrow">06 · How a capture works</div>
+        <h2 class="tour-h2">Quick Capture, in five steps.</h2>
+        <p class="tour-section-sub">Quick Capture is the on-ramp. A process owner who's never used a flowchart tool can ship a complete capture in under five minutes. Here's what each step collects and why it matters for the analysis downstream.</p>
+
+        <div class="tour-capture-steps">
+          <div class="tour-capture-step">
+            <div class="tour-capture-num">01</div>
+            <div class="tour-capture-body">
+              <div class="tour-capture-title">Set the scene</div>
+              <div class="tour-capture-what"><strong>What you collect:</strong> process name, team, owner, frequency, parent process if any.</div>
+              <div class="tour-capture-why"><strong>Why it matters:</strong> frequency × time saved per execution = annual ROI. Without this number, every optimization is opinion. Get it from the process owner — don't guess.</div>
+            </div>
+          </div>
+
+          <div class="tour-capture-step">
+            <div class="tour-capture-num">02</div>
+            <div class="tour-capture-body">
+              <div class="tour-capture-title">The cast — lanes</div>
+              <div class="tour-capture-what"><strong>What you collect:</strong> 2 to 5 swim lanes representing roles, teams, or systems. Each lane gets a color.</div>
+              <div class="tour-capture-why"><strong>Why it matters:</strong> handoffs between lanes are where work stalls. The Insights panel later counts cross-lane handoffs and flags them as friction. Three to five lanes is the sweet spot — more usually means you're trying to capture two processes at once.</div>
+            </div>
+          </div>
+
+          <div class="tour-capture-step">
+            <div class="tour-capture-num">03</div>
+            <div class="tour-capture-body">
+              <div class="tour-capture-title">The story — steps</div>
+              <div class="tour-capture-what"><strong>What you collect:</strong> the steps in sequence, each tagged to a lane. Mark decisions, exceptions, sub-processes, start, and end. Add system tags (Workday, Okta, etc.) where relevant.</div>
+              <div class="tour-capture-why"><strong>Why it matters:</strong> happy path first, exceptions second. Decision diamonds branch the flow. System tags become the System Hotspots in the Dashboard — bigger bars mean more annual hours tied up in that integration.</div>
+            </div>
+          </div>
+
+          <div class="tour-capture-step">
+            <div class="tour-capture-num">04</div>
+            <div class="tour-capture-body">
+              <div class="tour-capture-title">The friction — optimizations &amp; variances</div>
+              <div class="tour-capture-what"><strong>What you collect:</strong> on each step, flag whether it's optimizable. If yes: one sentence on the friction, current vs. target time. For multi-site processes, capture variances — which locations differ, what changes, time delta.</div>
+              <div class="tour-capture-why"><strong>Why it matters:</strong> this is where the dashboard math comes from. Flag problems, don't solve them — the analysis happens later. Every variance becomes a standardization candidate with a computable ROI.</div>
+            </div>
+          </div>
+
+          <div class="tour-capture-step">
+            <div class="tour-capture-num">05</div>
+            <div class="tour-capture-body">
+              <div class="tour-capture-title">Review &amp; launch</div>
+              <div class="tour-capture-what"><strong>What you collect:</strong> a final read-through of frequency × time × optimization flags before the process lands in the Atlas.</div>
+              <div class="tour-capture-why"><strong>Why it matters:</strong> garbage in, garbage out. The forecast on the Dashboard is only as honest as the times entered here. First capture takes 15 minutes — by the third, an experienced capturer is under five.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tour-capture-cta">
+          <button class="btn btn-primary" onclick="startWizard()">Try Quick Capture →</button>
+          <span style="font-size: 12.5px; color: var(--muted); margin-left: 14px;">Opens a working Quick Capture in the demo data — your existing processes won't be affected.</span>
+        </div>
+      </section>
+
+      <!-- Section 7: From POC to repository -->
+      <section class="tour-section">
+        <div class="section-eyebrow">07 · What ships next</div>
         <h2 class="tour-h2">From POC to repository.</h2>
         <p class="tour-section-sub">Today this is a single HTML file with local persistence — a working proof of concept that already covers the core capture, mapping, analysis, and multi-site variance loop. The path forward turns it into managed infrastructure.</p>
         <ul class="tour-bullets">
           <li><strong>Repository deployment.</strong> Version-controlled codebase, schema migrations, environment-specific configurations. Each release is reviewable.</li>
           <li><strong>IT-supported integration.</strong> SharePoint hosting, SSO, audit logging. Owned by IT the way other internal tools are owned.</li>
-          <li><strong>AI-assisted capture.</strong> Turn a manager's verbal description of a process into a draft swimlane. Reduce wizard time from minutes to seconds.</li>
+          <li><strong>AI-assisted capture.</strong> Turn a manager's verbal description of a process into a draft swimlane. Reduce capture time from minutes to seconds.</li>
           <li><strong>AI-assisted detection.</strong> Surface optimization patterns across processes — recurring system handoffs, common exception causes — that the human eye would miss at scale.</li>
           <li><strong>Portable schema.</strong> The JSON contract carries forward. Captures from today's POC load into tomorrow's deployment without re-entry.</li>
         </ul>
