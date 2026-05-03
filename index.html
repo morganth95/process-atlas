@@ -876,6 +876,302 @@
   .variance-hotspot-card { border-left: 3px solid #9d2d2d; }
   .variance-hotspot-card:hover { background: #fbf5f5; }
 
+  /* ── Process editor tour section ── */
+
+  /* Group wrapper with labeled divider */
+  .tour-editor-group {
+    margin-bottom: 40px;
+  }
+  .tour-editor-group-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--muted-soft);
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 8px;
+    margin-bottom: 18px;
+  }
+
+  /* A: Step shapes grid */
+  .tour-shape-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+  }
+  .tour-shape-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 16px 14px 14px;
+    text-align: center;
+  }
+  .tour-shape-demo {
+    height: 36px;
+    margin: 0 auto 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  /* Start — pill */
+  .tour-shape-demo-start {
+    width: 60px;
+    background: #2d6a4f;
+    border-radius: 20px;
+  }
+  /* Step — rect */
+  .tour-shape-demo-step {
+    width: 66px; height: 32px;
+    background: var(--bg-soft);
+    border: 2px solid #4a5e7a;
+    border-radius: 6px;
+  }
+  /* Decision — diamond SVG inline via border trick */
+  .tour-shape-demo-decision {
+    width: 34px; height: 34px;
+    background: #f5ecd7;
+    border: 2px solid #c9961f;
+    transform: rotate(45deg);
+    border-radius: 3px;
+    margin-bottom: 14px;
+  }
+  /* Sub-process — double border */
+  .tour-shape-demo-subproc {
+    width: 66px; height: 32px;
+    background: var(--bg-soft);
+    border: 2px solid #4a5e7a;
+    border-radius: 6px;
+    box-shadow: inset 0 0 0 3px var(--bg-soft), inset 0 0 0 5px #4a5e7a;
+  }
+  /* End — pill red */
+  .tour-shape-demo-end {
+    width: 60px;
+    background: #9d2d2d;
+    border-radius: 20px;
+  }
+  .tour-shape-name {
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--ink);
+    margin-bottom: 6px;
+  }
+  .tour-shape-desc {
+    font-size: 11.5px;
+    color: var(--muted);
+    line-height: 1.5;
+    text-align: left;
+  }
+
+  /* B: Path type row */
+  .tour-path-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  .tour-path-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 16px 18px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+  .tour-path-dot {
+    width: 14px; height: 14px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 3px;
+  }
+  .tour-path-dot.happy     { background: #2d6a4f; }
+  .tour-path-dot.exception { background: #9d2d2d; }
+  .tour-path-name {
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--ink);
+    margin-bottom: 6px;
+  }
+  .tour-path-desc {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.55;
+  }
+
+  /* C: Sub-process callout */
+  .tour-subproc-card {
+    background: #f5f0e6;
+    border: 1px solid #ddd5be;
+    border-left: 4px solid #4a5e7a;
+    border-radius: 0 10px 10px 0;
+    padding: 24px 28px;
+  }
+  .tour-subproc-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 14px;
+  }
+  .tour-subproc-icon {
+    font-size: 26px;
+    line-height: 1;
+    flex-shrink: 0;
+    color: #4a5e7a;
+    margin-top: 2px;
+  }
+  .tour-subproc-title {
+    font-family: 'Fraunces', serif;
+    font-size: 19px;
+    font-weight: 500;
+    color: var(--ink);
+    line-height: 1.3;
+  }
+  .tour-subproc-body > p {
+    font-size: 13.5px;
+    color: var(--muted);
+    line-height: 1.65;
+    margin-bottom: 18px;
+  }
+  .tour-subproc-rules {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  .tour-subproc-rule {
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 14px 16px;
+  }
+  .tour-subproc-rule.use   { border-top: 3px solid #2d6a4f; }
+  .tour-subproc-rule.avoid { border-top: 3px solid #9d2d2d; }
+  .tour-subproc-rule-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted-soft);
+    margin-bottom: 10px;
+  }
+  .tour-subproc-rule ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .tour-subproc-rule li {
+    font-size: 12.5px;
+    color: var(--ink-soft);
+    padding: 4px 0 4px 16px;
+    position: relative;
+    line-height: 1.45;
+    border-bottom: 1px solid var(--bg-soft);
+  }
+  .tour-subproc-rule li:last-child { border-bottom: none; }
+  .tour-subproc-rule.use   li::before { content: '✓'; position: absolute; left: 0; color: #2d6a4f; font-weight: 700; }
+  .tour-subproc-rule.avoid li::before { content: '–'; position: absolute; left: 0; color: #9d2d2d; font-weight: 700; }
+  .tour-subproc-how {
+    font-size: 12.5px;
+    color: var(--muted);
+    line-height: 1.6;
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 12px 14px;
+  }
+  .tour-subproc-how strong { color: var(--ink-soft); }
+
+  /* D: Step panel features */
+  .tour-step-features {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .tour-step-feature {
+    display: flex;
+    gap: 18px;
+    padding: 20px 22px;
+    border-bottom: 1px solid var(--line);
+    background: var(--surface);
+    transition: background 0.12s;
+  }
+  .tour-step-feature:last-child { border-bottom: none; }
+  .tour-step-feature:hover { background: var(--bg-soft); }
+  .tour-step-feature-icon {
+    font-size: 22px;
+    flex-shrink: 0;
+    width: 32px;
+    text-align: center;
+    line-height: 1.4;
+    color: var(--ink-soft);
+  }
+  .tour-step-feature-body { flex: 1; min-width: 0; }
+  .tour-step-feature-title {
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--ink);
+    margin-bottom: 5px;
+  }
+  .tour-step-feature-desc {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.6;
+    margin-bottom: 8px;
+  }
+  .tour-step-feature-tip {
+    font-size: 12px;
+    color: var(--ink-soft);
+    background: var(--amber-light, #fdf4dc);
+    border-left: 3px solid #c9961f;
+    padding: 7px 12px;
+    border-radius: 0 4px 4px 0;
+    line-height: 1.5;
+  }
+
+  /* E: Canvas toolbar grid */
+  .tour-toolbar-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .tour-toolbar-item {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 14px 16px;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  .tour-toolbar-key {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    background: var(--bg-soft);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 3px 8px;
+    white-space: nowrap;
+    color: var(--ink-soft);
+    flex-shrink: 0;
+    align-self: flex-start;
+    margin-top: 1px;
+  }
+  .tour-toolbar-desc {
+    font-size: 12.5px;
+    color: var(--muted);
+    line-height: 1.55;
+  }
+
+  /* Mobile adjustments for editor tour */
+  @media (max-width: 720px) {
+    .tour-shape-grid { grid-template-columns: repeat(3, 1fr); }
+    .tour-path-row   { grid-template-columns: 1fr; }
+    .tour-subproc-rules { grid-template-columns: 1fr; }
+    .tour-toolbar-grid  { grid-template-columns: 1fr; }
+  }
+
   /* Tour capture-step list (How a capture works section) */
   .tour-capture-steps {
     display: flex;
@@ -5263,9 +5559,221 @@ function renderTour() {
         </div>
       </section>
 
-      <!-- Section 7: From POC to repository -->
+      <!-- Section 7: The process editor -->
       <section class="tour-section">
-        <div class="section-eyebrow">07 · What ships next</div>
+        <div class="section-eyebrow">07 · The process editor</div>
+        <h2 class="tour-h2">Everything the canvas can do.</h2>
+        <p class="tour-section-sub">Quick Capture gets you to a draft. The process editor is where you refine it — fixing shapes, adding depth, capturing notes, and attaching location variances. Here's every capability, what it's for, and when to reach for it.</p>
+
+        <!-- ── A: Step shapes ── -->
+        <div class="tour-editor-group">
+          <div class="tour-editor-group-label">Step shapes</div>
+          <div class="tour-shape-grid">
+            <div class="tour-shape-card">
+              <div class="tour-shape-demo tour-shape-demo-start"></div>
+              <div class="tour-shape-name">Start</div>
+              <div class="tour-shape-desc">Where the process is triggered. One per process — the initiating event, not the first action.</div>
+            </div>
+            <div class="tour-shape-card">
+              <div class="tour-shape-demo tour-shape-demo-step"></div>
+              <div class="tour-shape-name">Step</div>
+              <div class="tour-shape-desc">The default shape. An action performed by the person in that lane. If in doubt, use this.</div>
+            </div>
+            <div class="tour-shape-card">
+              <div class="tour-shape-demo tour-shape-demo-decision"></div>
+              <div class="tour-shape-name">Decision</div>
+              <div class="tour-shape-desc">A branching point. Use for Yes/No splits, conditional routing, and approval gates. Outputs become separate paths.</div>
+            </div>
+            <div class="tour-shape-card">
+              <div class="tour-shape-demo tour-shape-demo-subproc"></div>
+              <div class="tour-shape-name">Sub-process</div>
+              <div class="tour-shape-desc">A step that is itself a full mapped process. Link it to a child process instead of expanding it inline.</div>
+            </div>
+            <div class="tour-shape-card">
+              <div class="tour-shape-demo tour-shape-demo-end"></div>
+              <div class="tour-shape-name">End</div>
+              <div class="tour-shape-desc">Where the process resolves. A process can have multiple ends — one for success, one for each failure mode.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── B: Path types ── -->
+        <div class="tour-editor-group">
+          <div class="tour-editor-group-label">Path types</div>
+          <div class="tour-path-row">
+            <div class="tour-path-card tour-path-happy">
+              <div class="tour-path-dot happy"></div>
+              <div>
+                <div class="tour-path-name">Happy path</div>
+                <div class="tour-path-desc">The way the process is supposed to go. Always map this completely before adding exceptions. The "Happy path only" toggle on the canvas hides exceptions so you can read the intended flow cleanly.</div>
+              </div>
+            </div>
+            <div class="tour-path-card tour-path-exception">
+              <div class="tour-path-dot exception"></div>
+              <div>
+                <div class="tour-path-name">Exception path</div>
+                <div class="tour-path-desc">A deviation from the happy path — rework loops, escalations, failures, workarounds. Mark the top three that actually happen. Don't capture every edge case.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── C: Sub-processes — dedicated callout ── -->
+        <div class="tour-editor-group">
+          <div class="tour-editor-group-label">Sub-processes — when to use them</div>
+          <div class="tour-subproc-card">
+            <div class="tour-subproc-head">
+              <div class="tour-subproc-icon">⊞</div>
+              <div class="tour-subproc-title">A sub-process is a step that deserves its own map.</div>
+            </div>
+            <div class="tour-subproc-body">
+              <p>Use a sub-process shape when a step is complex enough to warrant its own swim-lane map but doesn't need to be expanded inline every time it appears. The step renders with a double border on the canvas — a signal that clicking it will open the linked child process. This keeps the parent map readable while preserving the full depth of the child process in its own view.</p>
+              <div class="tour-subproc-rules">
+                <div class="tour-subproc-rule use">
+                  <div class="tour-subproc-rule-label">Use a sub-process when</div>
+                  <ul>
+                    <li>The step has its own lanes, decisions, and exceptions</li>
+                    <li>The step is reused across multiple parent processes</li>
+                    <li>Expanding it inline would require more than 3–4 additional steps</li>
+                    <li>The step is owned by a different team and has its own SLA</li>
+                  </ul>
+                </div>
+                <div class="tour-subproc-rule avoid">
+                  <div class="tour-subproc-rule-label">Keep it as a plain step when</div>
+                  <ul>
+                    <li>It's one or two actions by one person</li>
+                    <li>You're just annotating complexity — use the Notes field instead</li>
+                    <li>No one else will ever need to map the child in detail</li>
+                    <li>It only appears in this one process</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="tour-subproc-how">
+                <strong>How to link one:</strong> Add a Sub-process step → select it → open the Step tab → set the Linked Process dropdown to the child process. The canvas step will show a double border and open the child on click.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── D: Step panel features ── -->
+        <div class="tour-editor-group">
+          <div class="tour-editor-group-label">The Step panel — what you can attach to any step</div>
+          <div class="tour-step-features">
+
+            <div class="tour-step-feature">
+              <div class="tour-step-feature-icon">⚡</div>
+              <div class="tour-step-feature-body">
+                <div class="tour-step-feature-title">Optimization flag</div>
+                <div class="tour-step-feature-desc">Mark the step as an optimization opportunity. Add a one-line note on what makes it painful, set current vs. target minutes, and choose a status (Identified → Planned → In Progress → Implemented). This feeds the Dashboard ROI ranking and the Insights panel — and it's what turns from a flag to realized savings when you mark it Implemented.</div>
+                <div class="tour-step-feature-tip">💡 Flag problems, don't solve them here. One sentence is enough. The analysis happens in the Dashboard, not the editor.</div>
+              </div>
+            </div>
+
+            <div class="tour-step-feature">
+              <div class="tour-step-feature-icon">☑</div>
+              <div class="tour-step-feature-body">
+                <div class="tour-step-feature-title">Tasks</div>
+                <div class="tour-step-feature-desc">A checklist of sub-actions within the step. Use tasks when a step has a reliable sequence of micro-actions that process owners need to remember — not for documentation purposes, but because missing one causes rework. Tasks display on the canvas in the step's note callout when Notes are visible.</div>
+                <div class="tour-step-feature-tip">💡 Keep it to 3–5 tasks per step. If you're writing more, the step probably needs to be split into two steps.</div>
+              </div>
+            </div>
+
+            <div class="tour-step-feature">
+              <div class="tour-step-feature-icon">📝</div>
+              <div class="tour-step-feature-body">
+                <div class="tour-step-feature-title">Notes</div>
+                <div class="tour-step-feature-desc">Free-text context attached to a step — gotchas, exceptions not worth their own branch, system quirks, policy citations, person-specific knowledge. Notes are hidden by default and toggled with the Notes button on the canvas toolbar. They appear as small callout cards below their step when visible. This is the "I know something the map doesn't show" field.</div>
+                <div class="tour-step-feature-tip">💡 Use notes for institutional knowledge that would otherwise live in someone's head. "This step only works if the job code is already in Workday" belongs here.</div>
+              </div>
+            </div>
+
+            <div class="tour-step-feature">
+              <div class="tour-step-feature-icon">±</div>
+              <div class="tour-step-feature-body">
+                <div class="tour-step-feature-title">Location variances</div>
+                <div class="tour-step-feature-desc">Capture how this specific step differs at specific locations — extra approvals, different system, skipped entirely, longer for regulatory reasons. Each variance records which locations are affected, the type of deviation, the time delta, and a description. The canvas badges the step with ±N showing total locations affected. The Insights panel ranks these as variance hotspots with standardization ROI attached.</div>
+                <div class="tour-step-feature-tip">💡 Start with the steps that feel different when you visit different plants. Those are your hotspots. You don't have to capture all 23 locations at once.</div>
+              </div>
+            </div>
+
+            <div class="tour-step-feature">
+              <div class="tour-step-feature-icon">→</div>
+              <div class="tour-step-feature-body">
+                <div class="tour-step-feature-title">Connections</div>
+                <div class="tour-step-feature-desc">Outgoing links from this step to the next. Each connection can have a label (Yes/No, Approve/Reject, On track/Off track) and a display mode — Auto (the tool decides whether to show it), Show (always show the label), or Hide (suppress it). Loop-backs and backward edges arc gracefully over the canvas without crossing other arrows.</div>
+                <div class="tour-step-feature-tip">💡 Keep labels short. "Yes" / "No" is better than "Approved by manager" / "Rejected by manager" — the shape and lane already tell most of the story.</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ── E: Canvas toolbar ── -->
+        <div class="tour-editor-group">
+          <div class="tour-editor-group-label">Canvas toolbar — view controls</div>
+          <div class="tour-toolbar-grid">
+            <div class="tour-toolbar-item">
+              <div class="tour-toolbar-key">Notes</div>
+              <div class="tour-toolbar-desc">Toggles step note callouts on/off. Off by default — turn on when doing a detailed review or training walkthrough.</div>
+            </div>
+            <div class="tour-toolbar-item">
+              <div class="tour-toolbar-key">Happy path only</div>
+              <div class="tour-toolbar-desc">Hides all exception-path steps and their connections. Useful for reading the intended flow without the noise of failure modes.</div>
+            </div>
+            <div class="tour-toolbar-item">
+              <div class="tour-toolbar-key">Show implied lines</div>
+              <div class="tour-toolbar-desc">Surfaces connections that are implied (the destination is already reachable through other steps). Shown faded. Useful for spotting redundant paths.</div>
+            </div>
+            <div class="tour-toolbar-item">
+              <div class="tour-toolbar-key">Tidy</div>
+              <div class="tour-toolbar-desc">Resets step column positions to a clean sequential layout. Run this after adding or reordering steps to clear any visual clutter.</div>
+            </div>
+            <div class="tour-toolbar-item">
+              <div class="tour-toolbar-key">Focus / Lane filter</div>
+              <div class="tour-toolbar-desc">Isolates a single lane on the canvas, hiding all other lanes. Useful when reviewing what one role owns across the whole process.</div>
+            </div>
+            <div class="tour-toolbar-item">
+              <div class="tour-toolbar-key">Full-screen</div>
+              <div class="tour-toolbar-desc">Expands the canvas to fill the entire browser window — no chrome, no sidebars. Ideal for presenting in a meeting or doing a detailed walkthrough on a shared screen.</div>
+            </div>
+            <div class="tour-toolbar-item">
+              <div class="tour-toolbar-key">Download SVG</div>
+              <div class="tour-toolbar-desc">Exports the entire swimlane diagram as a vector SVG file. Scales to any size without pixelation — paste it into PowerPoint, Word, or SharePoint. The file is self-contained.</div>
+            </div>
+            <div class="tour-toolbar-item">
+              <div class="tour-toolbar-key">Print</div>
+              <div class="tour-toolbar-desc">Opens a print-optimized view of the canvas. Hides all UI chrome and renders just the swimlane map. Use this for physical sign-off copies or archiving a snapshot.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── F: Insights tab ── -->
+        <div class="tour-editor-group" style="margin-bottom: 0;">
+          <div class="tour-editor-group-label">The Insights panel — read before you edit</div>
+          <div class="tour-path-row">
+            <div class="tour-path-card" style="flex: 1; align-items: flex-start; gap: 14px; border-color: var(--line);">
+              <div style="font-size: 20px; flex-shrink: 0; margin-top: 2px;">🔍</div>
+              <div>
+                <div class="tour-path-name" style="color: var(--ink);">Open Insights before you start editing</div>
+                <div class="tour-path-desc">The Insights tab on the right panel runs automatically and surfaces: process integrity (connected, one start, one end), forecast savings, optimization opportunities ranked by annual hours, and variance hotspots by location reach. It tells you what's worth your attention before you scroll the canvas looking for it. Think of it as the map's index.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tour-capture-cta" style="margin-top: 28px;">
+          <button class="btn btn-primary" onclick="
+            const t = state.teams[0];
+            const proc = t && t.processes[0];
+            if (proc) navigate('process', { teamId: t.id, processId: proc.id });
+          ">Open a process →</button>
+          <span style="font-size: 12.5px; color: var(--muted); margin-left: 14px;">Opens the first process in your Atlas so you can follow along with any of the above.</span>
+        </div>
+      </section>
+
+      <!-- Section 8: From POC to repository -->
+      <section class="tour-section">
+        <div class="section-eyebrow">08 · What ships next</div>
         <h2 class="tour-h2">From POC to repository.</h2>
         <p class="tour-section-sub">Today this is a single HTML file with local persistence — a working proof of concept that already covers the core capture, mapping, analysis, and multi-site variance loop. The path forward turns it into managed infrastructure.</p>
         <ul class="tour-bullets">
